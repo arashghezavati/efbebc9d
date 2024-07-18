@@ -8,18 +8,20 @@
   "license": "",
   "private": false,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --open",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   },
   "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "8.1.0",
+    "cross-env": "^7.0.3",
     "css-loader": "2.1.*",
     "html-loader": "0.5.*",
     "html-webpack-plugin": "3.2.*",
