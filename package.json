@@ -12,8 +12,11 @@
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "axios": "^1.7.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

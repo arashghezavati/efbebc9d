@@ -1,0 +1,108 @@
+.archived-calls {
+  padding: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.unarchive-all-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.activity-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.activity-box:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.activity-date {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.activity-type {
+  display: flex;
+  align-items: center;
+}
+
+.activity-type i {
+  margin-right: 5px;
+}
+
+.unarchive-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.activity-info2{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 10px;
+  background-color: gainsboro;
+}
+
+@media (max-width: 768px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+
+}
+
+@media (max-width: 480px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-info2{
+    border:unset;
+  }
+
+}

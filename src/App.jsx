@@ -1,17 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Header from './Header.jsx';
+import ActivityFeed from './components/ActivityFeed.jsx';
+import ActivityDetail from './components/ActivityDetail.jsx';
+import ArchivedCalls from './components/ArchivedCalls.jsx';
 
 const App = () => {
   return (
-    <div className='container'>
-      <Header/>
-      <div className="container-view">Some activities should be here</div>
-    </div>
+    <Router>
+      <div className='container'>
+        <div className='start'>
+        <Header />
+        <div className="tabs">
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'tab-link active-tab' : 'tab-link'}>Activity Feed</NavLink>
+          <NavLink to="/archived" className={({ isActive }) => isActive ? 'tab-link active-tab' : 'tab-link'}>Archived Calls</NavLink>
+        </div>
+        </div>
+       
+        <div className="container-view">
+          <Routes>
+            <Route path="/" element={<ActivityFeed />} />
+            <Route path="/activity/:id" element={<ActivityDetail />} />
+            <Route path="/archived" element={<ArchivedCalls />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 };
-
-ReactDOM.render(<App/>, document.getElementById('app'));
 
 export default App;
